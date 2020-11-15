@@ -51,6 +51,7 @@ async def main_view_async(request):
     task2 = asyncio.ensure_future(get_movie_async("b"))
     # await asyncio.wait([task1, task2]) # wait till both tasks finished.
     # or doesn't wait and let it go straight to the end.
+    # await asyncio.gather(get_movie_async("a"), get_movie_async("B")) # basically the same with above but in fewer lines.
     total = (time.time() - start_time )
     print("total = ", total)
     return HttpResponse(f"Async time: {total}")
