@@ -56,7 +56,7 @@ async def main_view_async(request):
     return HttpResponse(f"Async time: {total}")
 
 
-#### What to know about these code ?
+# ### What to know about these code ?
 # browser -> localhost:8000/sync -> run main_view_sync will occupied terminal till finish. 
 # output :
 # preparing to get A...
@@ -71,5 +71,5 @@ async def main_view_async(request):
 # A is ready.
 # B is ready.
  
- # browser -> localhost:8000/async -> run main_view_async ( no await ) will NOT occupied ternimal, but go straight to bottom
- # outcome will run detachedly. ( don't know how to receive the return, guess it might not own the thread anymore.)
+#  browser -> localhost:8000/async -> run main_view_async ( no await ) will NOT occupied ternimal, but go straight to bottom
+#  outcome will run detachedly. ( don't know how to receive the return, guess it might not own the thread anymore.)
